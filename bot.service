@@ -1,0 +1,12 @@
+[Unit]
+Description=TDM Bot
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/tdm-referral-bot
+ExecStart=/home/ubuntu/tdm-referral-bot/venv/bin/python -m bot.main
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
