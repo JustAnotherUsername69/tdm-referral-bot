@@ -1,0 +1,12 @@
+[Unit]
+Description=TDM Broadcast Worker
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/tdm-referral-bot
+ExecStart=/home/ubuntu/tdm-referral-bot/venv/bin/python -m worker.broadcast_worker
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
